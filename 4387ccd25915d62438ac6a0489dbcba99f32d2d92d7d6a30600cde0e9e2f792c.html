@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>New clue found by bubu</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+        <script>
+            // Precomputed hashes for passwords
+            const correctHash = "44a0a25962692b88186d341a4eda4af0"; // MD5
+    
+            function checkPassword() {
+                const password = document.getElementById("password").value;
+                const hash = CryptoJS.MD5(password).toString();
+    
+                if (hash === correctHash) {
+                    window.location.href = "56a8ccd84672d465d68304ce4a6473cdba41b966c7713acae269e175d4187cc8.html";
+                } else {
+                    alert("Incorrect!");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h3>
+            Congratulations for solving the 1st hint. <br>
+            Here is something you should understand for the next clue. <br>
+        </h3>
+        <img src="sources/image1.png"> <br>
+        Solve above and type the solution in below textbox First alphabet in capital please.<br>
+        <input type="password" id="password" placeholder="Enter password" />
+        <button onclick="checkPassword()">Submit</button>
+    </body>
+</html>

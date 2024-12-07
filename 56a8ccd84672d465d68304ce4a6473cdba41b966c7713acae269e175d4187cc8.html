@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>New clue found by bubu</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+        <script>
+            // Precomputed hashes for passwords
+            const correctHash = "22c88af8395875ee1607e3f83fef17fc"; // MD5
+            let count = 0;
+            function checkPassword() {
+                const password = document.getElementById("password").value;
+                const hash = CryptoJS.MD5(password).toString();
+    
+                if (hash === correctHash) {
+                    window.location.href = "axrev9212.html";
+                    count = 0;
+                } else {
+                    alert("Incorrect!");
+                    count++;
+                    if (count > 5)
+                    {
+                        document.getElementById("hintLink").style.display = "inline";
+                    }
+                }
+
+            }
+        </script>
+    </head>
+    <body>
+        <h3>
+            Two in a row. AMAZING 🎉🎉🎉 <br>
+            I am sure this is final I will not take too much time. It kills the joy :/ <br>
+        </h3>
+
+        <p> 48692c204920616d206f7665726a6f796564207468617420796f7520776572652061626c6520746f
+            2066696e697368207468652074776f2e2054686973206973206a75737420746f207061737320796f
+            75722074696d6520616e64207468652070617373776f7264206973206f6e65206f66207468652078
+            626f782067616d6520574520706c6179656420696e2063616d656c206361736520616e64206e6f207370616365732e</p>
+        Solve above and type the solution in below textbox. make sure while you copy this string should not have any spaces.<br>
+        <input type="password" id="password" placeholder="Enter password" />
+        <button onclick="checkPassword()">Submit</button>
+        <!-- <a href="https://www.duplichecker.com/ascii-to-text.php">Hint is availabe here</a> -->
+        <a id="hintLink" href="https://www.duplichecker.com/ascii-to-text.php" style="display: none;">Hint is available here</a>
+        <!-- <button onclick="showHint()">Show Hint</button> -->
+        <!-- <button onclick="window.location.href='https://www.duplichecker.com/ascii-to-text.php'">hint</button> -->
+    </body>
+</html>
